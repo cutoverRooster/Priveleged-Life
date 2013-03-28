@@ -1,0 +1,530 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	width:100%;
+	font-family:"Open Sans", sans-serif;
+	font-weight:300;
+	/*background:url(../images/loader-dark.gif) no-repeat center center;*/
+	height:100%;
+}
+/*.clr {
+	clear:both;
+}*/
+
+/********** margin ******/
+.mT5{
+	margin-top:5px;
+}
+.mT10{
+	margin-top:10px;
+}
+.mT15{
+	margin-top:15px;
+}
+.mT20{
+	margin-top:20px;
+}
+.mR5{
+	margin-right:5px;
+}
+.mR10{
+	margin-right:10px;
+}
+.mR15{
+	margin-right:15px;
+}
+.mR20{
+	margin-right:20px;
+}
+.mB5{
+	margin-bottom:5px;
+}
+.mB10{
+	margin-bottom:10px;
+}
+.mB15{
+	margin-bottom:15px;
+}
+.mB20{
+	margin-bottom:20px;
+}
+.mL5{
+	margin-left:5px;
+}
+.mL10{
+	margin-left:10px;
+}
+.mL15{
+	margin-left:15px;
+}
+.mL20{
+	margin-left:20px;
+}
+
+/***********************/
+
+/********padding*********/
+.pT5{
+	padding-top:5px;	
+}
+.pT10{
+	padding-top:10px;
+}
+.pT15{
+	padding-top:15px;
+}
+.pT20{
+	padding-top:20px;
+}
+.pR5{
+	padding-right:5px;	
+}
+.pR10{
+	padding-right:10px;
+}
+.pR15{
+	padding-right:15px;
+}
+.pR20{
+	padding-right:20px;
+}
+.pB5{
+	padding-bootom:5px;	
+}
+.pB10{
+	padding-bottom:10px;
+}
+.pB15{
+	padding-bottom:15px;
+}
+.pB20{
+	padding-bottom:20px;
+}
+.pL5{
+	padding-left:5px;	
+}
+.pL10{
+	padding-left:10px;
+}
+.pL15{
+	padding-left:15px;
+}
+.pL20{
+	padding-left:20px;
+}
+
+/***********************/
+
+#loading{
+	width:50px;
+	height:50px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-25px;
+	margin-top:-25px;
+	z-index:-1;
+}
+#wrapper {
+	width:100%;
+	background:#fff;
+	display:none;
+}
+#topbar-wrapper {
+	width:100%;
+	background:#f8f3ea;
+	height:40px;
+}
+#topbar-content {
+	width:990px;
+	margin:0 auto;
+}
+#topbar-icons {
+	float:right;
+}
+#topbar-icons a {
+	display:inline-block;
+	padding:7px 0px 0px 5px;
+}
+/** CSS BLOCKS **/
+
+
+/** CONTENT AREA **/
+#content-wrapper {
+	width:100%;
+}
+#content {
+	width:990px;
+	margin:0 auto;
+	border-left: thin solid #cecece;
+	border-right: thin solid #cecece;
+}
+section {
+	width:940px;
+	margin:0 auto !important;
+	padding-bottom:20px;
+}
+.slider {
+	width:940px !important;
+	height:460px;
+	overflow:hidden;
+}
+/** HEADER **/
+header {
+	width:940px;
+	margin:0 auto;
+	height:80px;
+}
+#logo {
+	float:left;
+	padding:20px 0px;
+}
+#nav {
+	list-style:none;
+	/* Clear floats */
+    float:right;
+	position:relative;
+	z-index:5;
+}
+#nav li {
+	float:left;
+	margin-right:10px;
+	position:relative;
+}
+#nav a {
+	display:block;
+	color:#111;
+	padding:40px 5px 20px;
+	font-size:17px;
+	text-transform:uppercase;
+	text-decoration:none;
+	font-family: 'Fjalla One', sans-serif;
+}
+#nav a:hover {
+	color:#c8973c;
+}
+/*--- DROPDOWN ---*/
+#nav ul {
+	background:#fff; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+	background:rgba(255,255,255,0);/* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+	list-style:none;
+	position:absolute;
+	left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+}
+#nav ul li {
+	padding-top:1px; /* Introducing a padding between the li and the a give the illusion spaced items */
+	float:none;
+}
+#nav ul a {
+	white-space:nowrap;/* Stop text wrapping and creating multi-line dropdown items */
+}
+#nav li:hover ul { /* Display the dropdown on hover */
+	left:0; /* Bring back on-screen when needed */
+	top:65px;
+	background:#fff;
+}
+#nav li:hover a { /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+/* background:#6b0c36;
+    text-decoration:underline;*/
+}
+#nav li:hover ul a { /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+	text-decoration:none;
+	padding:5px;
+}
+#nav li:hover ul li a:hover { /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+	/*background:#333;*/
+}
+/** CONTENT AREA **/
+.row {
+	margin-top:5px;
+	clear:both;
+}
+.big-row {
+	height:390px;
+}
+.small-row {
+	height:210px;
+}
+.mini-row {
+	height:70px;
+}
+.one-col-big {
+	width:100%;
+	float:left;
+}
+#home .slider{
+	padding-bottom:5px;
+}
+.two-col-big {
+	width:625px;
+	float:left;
+	overflow:hidden;
+}
+.two-col-small {
+	width:310px;
+	float:left;
+	overflow:hidden;
+}
+.box {
+	position:relative;
+}
+.box article {
+	position:relative;
+}
+.txt-center{
+	text-align:center;
+}
+.font-head-mid{
+	font-size:20px !important;
+}
+
+/*.box article img.background{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:-1;
+	height:100%;
+}*/
+.pad-left-box {
+	margin-left:5px;
+}
+.box .text-area {
+	position:absolute;
+	bottom:10px;
+	left:20px;
+	z-index:50;
+}
+.box .caption-head {
+	font-size:43px;
+	color:#f0e8d9;
+	font-family: 'Fjalla One', sans-serif;
+	text-transform:uppercase;
+	width:100%;
+}
+.box .caption-small {
+	font-family: 'Open Sans', sans-serif;
+	font-size:12px;
+	line-height:14px;
+	color:#f0e8d9;
+	width:75%;
+}
+.small-art .text-area{
+	left:0;
+	bottom:10px;
+	width:100%
+}
+.background {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	padding:0;
+	margin:0;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
+	overflow:hidden;
+}
+.stretch {
+	min-height: 100%;
+	min-width:100%;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+.big-art {
+	height:390px;
+}
+.mid-art {
+	height:212px;
+}
+.small-art {
+	height:194px;
+}
+#newsletter {
+	background:#111;
+}
+#newsletter article {
+	float:left;
+	margin-top:25px;
+	margin-left:20px;
+}
+#newsletter form {
+	float:left;
+	margin-top:5px;
+}
+#newsletter form input {
+	float:left;
+	margin	:14px 0 0 20px;
+	display:inline-block;
+	width:512px;
+	height:30px;
+	background:#e2e2e2;
+	border:2px solid #a4272d;
+}
+#newsletter form input[type="submit"] {
+	width:90px;
+	height:35px;
+	margin-left:10px;
+	margin-top: 13px;
+	font-size:18px;
+	background:url(../images/home/960_home_Subscribe.png) repeat-x;
+	color:#f0e8d9;
+	font-family: 'Fjalla One', sans-serif;
+	text-transform:uppercase;
+}
+/* FOOTER */
+footer {
+	width:100%;
+	background:#f0e8d9;
+	height:300px;
+}
+footer #foot-area {
+	width:940px;
+	margin:0 auto;
+}
+footer ul#foot-nav {
+	list-style-type:none;
+}
+footer ul#foot-nav li {
+	display:block;
+	position:relative;
+	float:left;
+	width:235px;
+	margin-top:45px;
+	padding:0px 35px;
+	font-size:34px;
+	font-family: 'Fjalla One', sans-serif;
+	border-right:thin solid #d1cbc1;
+	text-transform:uppercase;
+	height:215px;
+	color:#615f5c;
+}
+footer ul#foot-nav li:last-child {
+	border:none;	
+}
+footer ul#foot-nav li ul {
+	position:absolute;
+	top:45px;
+	left:35px;
+}
+footer ul#foot-nav li ul li {
+	margin:0px 0px 5px;
+	display:block;
+	border:none;
+	padding:0px;
+	height:18px;
+}
+footer ul#foot-nav li ul li a {
+	text-decoration:none;
+	color:#615f5c;
+	font-size:16px;
+	font-family: 'Open Sans', sans-serif;
+	text-transform:capitalize;
+	font-weight:700;
+}
+footer ul#foot-nav li ul li a:hover{
+	color:#111;
+}
+footer li{
+	float:left;
+}
+	
+/*----------------About Us------------*/
+.aboutusBanner{
+	height:656px;
+	width:940px;
+	background-image:url(../images/aboutus/bannerImage.png);	
+}
+.aboutContent
+{
+	float:left;
+	margin:320px 0 0 30px;
+}
+.aboutHeadline {
+    bottom: 35px;
+    color: #F0E8D9;
+    font-family: 'Fjalla One',sans-serif;
+    font-size: 53px;
+    left: 0;
+    line-height: 55px;
+    position: absolute !important;
+    text-transform: uppercase;
+	margin-top:10px;
+}
+.rsABlock {
+    color: #FFFFFF;
+    width: 570px;
+}
+
+.txtCent {
+    padding-top: 274px;
+    text-align: left;
+    width: 100%;
+}
+
+/*-------------------------------------*/
+
+/*--------------Press------------------*/
+.pcontent{
+	float:left;
+	margin:20px 0 0 20px;
+	
+}
+.pcaption-head{
+    color:#900;
+    font-family: 'Fjalla One',sans-serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.pre{
+	font-size:12px;
+	
+}
+.pcaption-smal{
+	color: #F0E8D9;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    width: 75%;
+}
+
+/*-------------------------------------*/
+
+/*--------------Dealer------------------*/
+.dealerswrapper{
+	width:448px;
+	height:214px;
+	border:10px solid #999999;
+	}
+.floatL
+{
+	float:left;
+	
+}
+.floatR
+{
+	float:right;
+}
+
+/*-------------------------------------*/
+	
+	
+@media screen and (min-width: 0px) and (max-width: 990px) { 
+#content{
+	width:100%;
+}
+#topbar-content{
+	width:100%;
+}
+
+
+}
+
+
+
